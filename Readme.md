@@ -22,37 +22,37 @@ These instructions are the “broad strokes” I took to make react app instead 
 const path = require("path");
 const webpack = require("webpack");
  
-module.exports = {
-  entry: "./src/index.js",
-  mode: "development",
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: "babel-loader",
-        options: { presets: ["@babel/env"] }
-      },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      }
-    ]
-  },
-  resolve: { extensions: ["*", ".js", ".jsx"] },
-  output: {
-    path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist/",
-    filename: "bundle.js"
-  },
-  devServer: {
-    contentBase: path.join(__dirname, "public/"),
-    port: 3000,
-    publicPath: "http://localhost:3000/dist/",
-    hotOnly: true
-  },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
-};
+module.exports = {<br />
+  entry: "./src/index.js",<br />
+  mode: "development",<br />
+  module: {<br />
+    rules: [<br />
+      {<br />
+        test: /\.(js|jsx)$/,<br />
+        exclude: /(node_modules|bower_components)/,<br />
+        loader: "babel-loader",<br />
+        options: { presets: ["@babel/env"] }<br />
+      },<br />
+      {<br />
+        test: /\.css$/,<br />
+        use: ["style-loader", "css-loader"]<br />
+      }<br />
+    ]<br />
+  },<br />
+  resolve: { extensions: ["*", ".js", ".jsx"] },<br />
+  output: {<br />
+    path: path.resolve(__dirname, "dist/"),<br />
+    publicPath: "/dist/",<br />
+    filename: "bundle.js"<br />
+  },<br />
+  devServer: {<br />
+    contentBase: path.join(__dirname, "public/"),<br />
+    port: 3000,<br />
+    publicPath: "http://localhost:3000/dist/",<br />
+    hotOnly: true<br />
+  },<br />
+  plugins: [new webpack.HotModuleReplacementPlugin()]<br />
+};<br />
 
 7.npm install react@16.5.2 react-dom@16.5.2 which is necessary to tell react where to look in the DOM for rendering. 
 
@@ -63,21 +63,21 @@ import App from "./App.js";
 ReactDOM.render(<App />, document.getElementById('root'));
 
 9. Create App.js file (familiar from create-react-app). This app.js file does “all the work” and you can import your xxx.css file here.
-import React, { Component } from "react";
-import "./App.css";
-import { hot } from "react-hot-loader";
+import React, { Component } from "react";<br />
+import "./App.css";<br />
+import { hot } from "react-hot-loader";<br />
  
-class App extends Component {
-    render() {
-        return(
-            <div className="App">
-		//h1
-                <h1>Your Header Here!</h1>
-            </div>
-        );
-    }
+class App extends Component {<br />
+    render() {<br />
+        return(<br />
+            <div className="App"><br />
+		//h1<br />
+                <h1>Your Header Here!</h1><br />
+            </div><br />
+        );<br />
+    }<br />
 }
- 
+ <br />
 export default App;
 
 10. Start and set up script in the package.json file 
@@ -86,17 +86,17 @@ Command is: z:\\<path>$: npx webpack-dev-server --mode development
 *** under scripts in your package.json file 
 “start“ : “npx webpack-dev-server --mode development” and this will allow you to type in npm run start (just like create-react-app)
 
-<h1>Project Structure
-.
-+-- public
-  |____index.html
-+-- src
-  |____App.css
-  |____App.js
-  |____index.js
-+-- .babelrc
-+-- .gitignore 
-	+-- webpack.config.js</h1>
+<h1>Project Structure	
+. <br />
++-- public<br />
+  |____index.html<br />
++-- src<br />
+  |____App.css<br />
+  |____App.js<br />
+  |____index.js<br />
++-- .babelrc<br />
++-- .gitignore <br />
+	+-- webpack.config.js</h1><br />
 **I’ve excluded the npm_modules and package.json/package-lock.json files. 
 ***The folders you need to create are src and public 
 ****Files that need to be creates are the ones indicated above
