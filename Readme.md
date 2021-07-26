@@ -1,4 +1,5 @@
 React from scratch
+
 These instructions are the “broad strokes” I took to make react app instead of using create-react-app from npm. React.js is dependent on babel and webpack which are two topics that warrant a deeper dive.
 
 1. npm init as you would in any Node.js project
