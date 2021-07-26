@@ -1,4 +1,4 @@
-React from scratch
+<h1>React from scratch</h1>
 
 These instructions are the “broad strokes” I took to make react app instead of using create-react-app from npm. React.js is dependent on babel and webpack which are two topics that warrant a deeper dive.
 
@@ -71,7 +71,7 @@ class App extends Component {
     render() {
         return(
             <div className="App">
-                <h1>It's a bad man's world!</h1>
+                <h1>Your Header Here!</h1>
             </div>
         );
     }
@@ -85,7 +85,7 @@ Command is: z:\\<path>$: npx webpack-dev-server --mode development
 *** under scripts in your package.json file 
 “start“ : “npx webpack-dev-server --mode development” and this will allow you to type in npm run start (just like create-react-app)
 
-Project Structure
+<h1>Project Structure
 .
 +-- public
   |____index.html
@@ -95,7 +95,7 @@ Project Structure
   |____index.js
 +-- .babelrc
 +-- .gitignore 
-+-- webpack.config.js
+	+-- webpack.config.js</h1>
 **I’ve excluded the npm_modules and package.json/package-lock.json files. 
 ***The folders you need to create are src and public 
 ****Files that need to be creates are the ones indicated above
